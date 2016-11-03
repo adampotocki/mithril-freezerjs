@@ -24,9 +24,9 @@ const Cart = {
       m('.uk-margin-small-bottom', `Total: $${vnode.attrs.total}`),
       m('button.uk-button.uk-button-large.uk-button-success.uk-align-right', {
         disabled: hasProducts ? '' : 'disabled',
-        onclick: (e) => {
+        onclick: e => {
           e.target.disabled = true;
-          vnode.attrs.onCheckoutClicked()
+          vnode.attrs.onCheckoutClicked();
         }
       }, 'Checkout')
     ]);

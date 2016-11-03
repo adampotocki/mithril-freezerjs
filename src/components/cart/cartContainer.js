@@ -15,7 +15,7 @@ const CartContainer = {
       onCheckoutClicked: this.onCheckoutClicked(cart.products)
     });
   },
-  onCheckoutClicked: (products) => {
+  onCheckoutClicked(products) {
     if (products.length) {
       return () => State.trigger('products:checkout');
     }

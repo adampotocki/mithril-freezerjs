@@ -4,7 +4,7 @@
 import m from 'mithril';
 
 const Api = {
-  getProducts: (cb, timeout=500) => {
+  getProducts: (cb) => {
     return m.request({
       method: 'GET',
       url: '/products.json'
