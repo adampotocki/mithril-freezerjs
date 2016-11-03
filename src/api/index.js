@@ -7,7 +7,7 @@ const Api = {
   getProducts: (cb) => {
     return m.request({
       method: 'GET',
-      url: './build/products.json'
+      url: '/products.json'
     }).run(cb);
   },
   buyProducts: (payload, cb, timeout=500) => {
