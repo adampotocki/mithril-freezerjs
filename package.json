@@ -1,0 +1,38 @@
+{
+  "name": "mithril-freezerjs",
+  "version": "1.0.0",
+  "description": "Mithril with Freezer.js",
+  "main": "src/index.js",
+  "scripts": {
+    "browse": "browser-sync start --server 'build' --files 'build' --no-notify",
+    "build": "NODE_ENV=production rollup -c",
+    "build-dev": "NODE_ENV=dev rollup -c",
+    "start": "npm run build && npm-run-all --parallel watch browse",
+    "start-dev": "npm run build-dev && npm-run-all --parallel watch browse",
+    "watch": "onchange src -- npm run build-dev"
+  },
+  "keywords": [
+    "mithril",
+    "freezer-js"
+  ],
+  "author": "Adam Potocki",
+  "license": "MIT",
+  "dependencies": {
+    "freezer-js": "^0.11.2",
+    "mithril": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.17.5",
+    "buble": "^0.14.2",
+    "npm-run-all": "^3.1.1",
+    "onchange": "^3.0.2",
+    "rollup": "^0.36.3",
+    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-commonjs": "^5.0.5",
+    "rollup-plugin-filesize": "^1.0.1",
+    "rollup-plugin-includepaths": "^0.1.6",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "uglify-js": "^2.7.4"
+  }
+}
